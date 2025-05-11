@@ -1,6 +1,8 @@
 import Image from "next/image";
+import { mono } from "./fonts";
 
 export default function Home() {
+  console.log("FONT", mono);
   return (
     <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
@@ -97,6 +99,10 @@ export default function Home() {
           />
           Go to nextjs.org →
         </a>
+
+        <p className={`text-red-500 ${mono.className} font-[700]`}>
+          My First Text
+        </p>
       </footer>
     </div>
   );
